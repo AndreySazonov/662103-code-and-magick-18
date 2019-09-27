@@ -27,7 +27,7 @@ var getMaxElement = function (arr) {
 
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] > maxElement) {
-      maxElement = arr[i]
+      maxElement = arr[i];
     }
   }
 
@@ -50,9 +50,9 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
-      ctx.fillStyle = 'rgba(0, 0, 255, ' + Math.random() + ')'
+      ctx.fillStyle = 'rgba(0, 0, 255, ' + Math.random() + ')';
     }
-    ctx.fillRect(BAR_X + (BAR_WIDTH + BAR_GAP) * i, BAR_Y, BAR_WIDTH, -(BAR_HEIGHT * times[i]) / maxTime );
+    ctx.fillRect(BAR_X + (BAR_WIDTH + BAR_GAP) * i, BAR_Y, BAR_WIDTH, -(BAR_HEIGHT * times[i]) / maxTime);
     getTextMessage(ctx, Math.round(times[i]), BAR_X + (BAR_WIDTH + BAR_GAP) * i, CLOUD_HEIGHT - GAP * 4 - (BAR_HEIGHT * times[i]) / maxTime, '#000');
   }
 };
